@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.wd.helper.ui.viewgroup.SlideMenu
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/SlideMenu"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+            <include layout="@layout/layout_main_new"/>
+            <include layout="@layout/layout_menu_new"/>
+</com.demo.wd.helper.ui.viewgroup.SlideMenu>

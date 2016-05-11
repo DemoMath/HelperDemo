@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+    <com.demo.wd.helper.ui.view.CircleImageView
+        android:id="@+id/photo"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:src="@mipmap/widget_dface"
+        app:border_width="2dp"
+        app:border_color="@color/transparent"/>
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/photo"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/photo"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dip"
+            android:text="赵云"
+            android:textColor="#697fb1"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_info"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@id/photo"
+        android:orientation="vertical">
+
+        <!-- 文字内容 -->
+
+        <LinearLayout
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我发表了文字"
+                android:textColor="#cc000000"/>
+        </LinearLayout>
+        <!-- 图片内容 -->
+        <com.demo.wd.helper.ui.widget.MessageDetailGridView
+            android:id="@+id/image_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="3dip"
+            />
+<!--
+        <LinearLayout
+            android:id="@+id/link_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:background="#EDEEEE"
+            android:orientation="horizontal"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/link_icon"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@mipmap/icon"/>
+
+            <TextView
+                android:id="@+id/link_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dip"
+                android:text="这是一个 神奇的，很神奇的\n事件"
+                android:textColor="@color/black"/>
+        </LinearLayout>-->
+        <!-- 发表时间 -->
+        <RelativeLayout
+            android:id="@+id/date_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2小时前"
+                android:textColor="#C6C6C6"/>
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/date"
+                android:text="删除"
+                android:textColor="#959ba9"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/reply_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/feed_more"/>
+        </RelativeLayout>
+        <!-- 回复 -->
+        <LinearLayout
+            android:id="@+id/reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/detail"
+            android:orientation="vertical">
+            <!-- 赞 -->
+            <LinearLayout
+                android:id="@+id/favour_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/reply_favour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip">
+
+                    <TextView
+                        android:id="@+id/favuor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/s_msg_icon_praise"
+                        android:text="jiayen"
+                        android:textColor="#697fb1"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/praise_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#cccccc"/>
+            </LinearLayout>
+
+            <com.demo.wd.helper.ui.widget.MessageDetailListView
+                android:id="@+id/reply_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:divider="@null"/>
+
+            <TextView
+                android:id="@+id/reply_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="更多"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

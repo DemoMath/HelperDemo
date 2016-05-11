@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discoverfragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        android:id="@+id/friendsgroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/tv_friendsgroup"
+            style="@style/searchItemName"
+            android:drawableLeft="@mipmap/icon_explore_friends"
+            android:text="好友圈" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/find"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/friendsgroup"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/tv_find"
+            style="@style/searchItemName"
+            android:drawableLeft="@mipmap/icon_explore_finduser"
+            android:text="找人" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/find"
+        android:layout_marginTop="1dp" >
+
+        <TextView
+            android:id="@+id/tv_answer"
+            style="@style/searchItemName"
+            android:drawableLeft="@mipmap/icon_explore_event"
+            android:text="答疑" />
+    </RelativeLayout>
+
+   <!-- <RelativeLayout
+        android:id="@+id/shake"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/answer"
+        android:layout_marginTop="30dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_shake"
+            style="@style/searchItemName"
+            android:drawableLeft="@mipmap/icon_explore_shake"
+            android:text="摇一摇"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scanning"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/shake"
+        android:layout_marginTop="1dp" >
+
+        <TextView
+            android:id="@+id/tv_scanning"
+            style="@style/searchItemName"
+            android:drawableLeft="@mipmap/icon_explore_scan"
+            android:text="扫一扫"/>
+    </RelativeLayout>
+-->
+</RelativeLayout>

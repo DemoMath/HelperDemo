@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.demo.wd.helper.ui.widget.PagerSlidingTabStrip
+        android:id="@+id/news_pagertab"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#379e4c"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/news_viewpager"
+        android:background="#eeeeee"
+        android:layout_below="@id/news_pagertab"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

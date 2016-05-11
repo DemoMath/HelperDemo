@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2E2E2"
+    android:orientation="vertical" >
+
+    <com.demo.wd.helper.ui.widget.CustomerScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/feedback_layout"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:layout_height="50dp"
+                android:background="@drawable/drawer_menu_item_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:id="@+id/ic_quest"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/drawer_menu_icon_quest" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ic_quest"
+                    android:text="@string/menu_ask"
+                    android:textColor="@color/drawer_menu_text"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#10000000"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+            
+            <RelativeLayout
+                android:id="@+id/declare_layout"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:layout_height="50dp"
+                android:background="@drawable/drawer_menu_item_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:id="@+id/ic_opensoft"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/drawer_menu_icon_opensoft" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ic_opensoft"
+                    android:text="@string/menu_speak"
+                    android:textColor="@color/drawer_menu_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#1a000000" />
+            
+            <RelativeLayout
+                android:id="@+id/author_layout"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:layout_height="50dp"
+                android:background="@drawable/drawer_menu_item_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:id="@+id/ic_blog"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/drawer_menu_icon_blog" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ic_blog"
+                    android:text="@string/menu_author"
+                    android:textColor="@color/drawer_menu_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#10000000"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+            
+            <RelativeLayout
+                android:id="@+id/look_layout"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:layout_height="50dp"
+                android:background="@drawable/drawer_menu_item_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:id="@+id/ic_gitapp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/drawer_menu_icon_gitapp" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ic_gitapp"
+                    android:text="@string/menu_looksource"
+                    android:textColor="@color/drawer_menu_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#1a000000" />
+            
+        </LinearLayout>
+    </com.demo.wd.helper.ui.widget.CustomerScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="8dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设置"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/drawer_menu_icon_setting"
+            android:textColor="@color/drawer_menu_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/drawer_menu_icon_exit"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="退出"
+            android:textColor="@color/drawer_menu_text"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>
